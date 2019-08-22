@@ -1430,6 +1430,9 @@ units::volume Character::volume_carried_with_tweaks( const item_tweaks &tweaks )
 
 units::mass Character::weight_capacity() const
 {
+    if( worn_with_flag( "INFINITE_CARRY" ) ) {
+        return units::mass_max;
+    }
     if( has_trait( trait_id( "DEBUG_STORAGE" ) ) ) {
         // Infinite enough
         return units::mass_max;
@@ -1443,9 +1446,6 @@ units::mass Character::weight_capacity() const
 
     if( has_artifact_with( AEP_CARRY_MORE ) ) {
         ret += 22500_gram;
-    }
-    if( has_artifact_with( AEP_INFINITE_CARRY ) ) {
-        return units::mass_max;
     }
     if( has_bionic( bionic_id( "bio_weight" ) ) ) {
         ret += 20_kilogram;
@@ -1465,7 +1465,7 @@ units::mass Character::weight_capacity() const
 
 units::volume Character::volume_capacity() const
 {
-    if( has_artifact_with( AEP_INFINITE_CARRY ) ) {
+    if( worn_with_flag( "INFINITE_CARRY", num_bp ) ) {
         return units::volume_max;
     }
     return volume_capacity_reduced_by( 0_ml );

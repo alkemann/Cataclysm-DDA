@@ -7403,7 +7403,7 @@
     "storage": 80,
     "warmth": 10,
     "material_thickness": 2,
-    "flags": [ "BELTED", "WATER_FRIENDLY", "AEP_INFINITE_CARRY" ]
+    "flags": [ "BELTED", "WATER_FRIENDLY", "INFINITE_CARRY" ]
   },
   {
     "id": "runner_bag",
