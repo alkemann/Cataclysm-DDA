@@ -104,9 +104,7 @@ enum art_effect_passive : int {
     AEP_SICK, // Decreases health over time
     AEP_CLAIRVOYANCE_PLUS, // See through walls to a larger distance; not bad effect, placement to preserve old saves.
 
-    NUM_AEPS,
-
-    AEP_INFINITE_CARRY // Allows for infinite carry capacity
+    NUM_AEPS
 };
 
 enum artifact_natural_property {

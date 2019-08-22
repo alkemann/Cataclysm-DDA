@@ -11685,10 +11685,6 @@ void game::add_artifact_messages( const std::vector<art_effect_passive> &effects
                 add_msg( m_good, _( "Your back feels strengthened." ) );
                 break;
 
-            case AEP_INFINITE_CARRY:
-                add_msg( m_good, _( "The endless magical storage allows you to carry it all." ) );
-                break;
-
             case AEP_FUN:
                 add_msg( m_good, _( "You feel a pleasant tingle." ) );
                 break;
