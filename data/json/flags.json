@@ -89,6 +89,12 @@
     "info": "This piece of clothing has a <info>wide collar</info> that can keep your mouth warm if it is unencumbered."
   },
   {
+    "id": "AEP_INFINITE_CARRY",
+    "type": "json_flag",
+    "context": [ "ARMOR", "TOOL_ARMOR" ],
+    "info": "Any item stored in this magical container will be considered weightless, i.e. the weight of the item for the character does not change when items is stored in it."
+  },
+  {
     "id": "DEAF",
     "type": "json_flag",
     "context": [ "ARMOR", "TOOL_ARMOR" ],
