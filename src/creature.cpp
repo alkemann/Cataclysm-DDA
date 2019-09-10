@@ -1141,6 +1141,17 @@ effect Creature::get_effect_with_flag( const std::string &flag, body_part bp ) c
     }
     return effect::null_effect;
 }
+int Creature::get_effect_mod_by_flag( const std::string &flag, body_part bp, const std::string &mod ) const
+{
+    for( auto &elem : *effects ) {
+        for( const std::pair<body_part, effect> &_it : elem.second ) {
+            if( bp == _it.first && _it.second.has_flag( flag ) ) {
+                return _it.second.get_mod( mod );
+            }
+        }
+    }
+    return 1;
+}
 time_duration Creature::get_effect_dur( const efftype_id &eff_id, body_part bp ) const
 {
     const effect &eff = get_effect( eff_id, bp );
