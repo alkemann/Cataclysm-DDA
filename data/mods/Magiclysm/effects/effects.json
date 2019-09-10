@@ -21,6 +21,17 @@
   },
   {
     "type": "effect_type",
+    "id": "debug_regen",
+    "name": [ "Debug Healing" ],
+    "desc": [ "You heal over time faster." ],
+    "apply_message": "Your skin tingle with the sense of renewed life.",
+    "remove_message": "Your skin stops tingling.",
+    "rating": "good",
+    "flags": [ "EFFECT_REGEN" ],
+    "base_mods": { "heal": [ 200 ] }
+  },
+  {
+    "type": "effect_type",
     "id": "debug_ground_protection",
     "name": [ "Debug Lighting Protection" ],
     "desc": [ "You can not be harmed by electricity." ],

@@ -4228,12 +4228,20 @@ void player::regen( int rate_multiplier )
         }
     }
 
+    int effect_regen = 0;
+    if( has_effect_with_flag( "EFFECT_REGEN" ) ) {
+        effect eff = get_effect_with_flag( "EFFECT_REGEN" );
+        effect_regen = eff.get_mod( "heal" );
+        add_msg( " Regen %d", effect_regen );
+    }
+
     // include healing effects
     for( int i = 0; i < num_hp_parts; i++ ) {
         body_part bp = hp_to_bp( static_cast<hp_part>( i ) );
         float healing = healing_rate_medicine( rest, bp ) * to_turns<int>( 5_minutes );
 
-        int healing_apply = roll_remainder( healing );
+        int healing_apply = roll_remainder( healing ) + effect_regen;
+        add_msg( " Healing %d", healing_apply );
         healed_bp( i, healing_apply );
         heal( bp, healing_apply );
         if( damage_bandaged[i] > 0 ) {

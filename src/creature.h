@@ -349,6 +349,7 @@ class Creature
         bool has_effect_with_flag( const std::string &flag, body_part bp = num_bp ) const;
         /** Return the effect that matches the given arguments exactly. */
         const effect &get_effect( const efftype_id &eff_id, body_part bp = num_bp ) const;
+        const effect &get_effect_with_flag( const std::string &flag, body_part bp = num_bp ) const;
         effect &get_effect( const efftype_id &eff_id, body_part bp = num_bp );
         /** Returns the duration of the matching effect. Returns 0 if effect doesn't exist. */
         time_duration get_effect_dur( const efftype_id &eff_id, body_part bp = num_bp ) const;

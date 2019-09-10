@@ -55,6 +55,23 @@
     "max_duration": 100000
   },
   {
+    "id": "debug_regen",
+    "type": "SPELL",
+    "name": "Debug Regenerate",
+    "description": "You heal faster.",
+    "message": "You cast Debug Regenerate!",
+    "valid_targets": [ "self" ],
+    "effect": "target_attack",
+    "effect_str": "debug_regen",
+    "min_range": 1,
+    "max_range": 1,
+    "base_casting_time": 100,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "min_duration": 100000,
+    "max_duration": 100000
+  },
+  {
     "id": "debug_ground_protection",
     "type": "SPELL",
     "name": "Debug Feather Falln",
