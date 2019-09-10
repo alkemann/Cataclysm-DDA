@@ -4231,7 +4231,7 @@ void player::regen( int rate_multiplier )
     int effect_regen = 0;
     if( has_effect_with_flag( "EFFECT_REGEN" ) ) {
         effect eff = get_effect_with_flag( "EFFECT_REGEN" );
-        effect_regen = eff.get_mod( "heal" );
+        effect_regen = eff.get_mod( "healing_rate" );
         add_msg( " Regen %d", effect_regen );
     }
 

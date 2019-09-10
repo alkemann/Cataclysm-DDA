@@ -28,7 +28,7 @@
     "remove_message": "Your skin stops tingling.",
     "rating": "good",
     "flags": [ "EFFECT_REGEN" ],
-    "base_mods": { "heal": [ 200 ] }
+    "base_mods": { "healing_rate": [ 20 ] }
   },
   {
     "type": "effect_type",
