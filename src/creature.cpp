@@ -1130,10 +1130,10 @@ const effect &Creature::get_effect( const efftype_id &eff_id, body_part bp ) con
     }
     return effect::null_effect;
 }
-effect Creature::get_effect_with_flag( const std::string &flag, body_part bp ) const
+const effect &Creature::get_effect_with_flag( const std::string &flag, body_part bp ) const
 {
     for( auto &elem : *effects ) {
-        for( const std::pair<body_part, effect> &_it : elem.second ) {
+        for( const std::pair<const body_part, effect> &_it : elem.second ) {
             if( bp == _it.first && _it.second.has_flag( flag ) ) {
                 return _it.second;
             }
